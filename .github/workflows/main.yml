@@ -6,6 +6,6 @@ jobs:
     steps:
       - name: Print text from index.js
         run: cat dist/index.js
-      - name: Checkout code นะจ๊ะ
-        uses: action/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
         
