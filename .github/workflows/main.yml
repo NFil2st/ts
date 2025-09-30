@@ -18,9 +18,9 @@ jobs:
           run: |
             output=$(node dist/Test1.js)
 
-            if [ "$output" -eq ถูก ] || [ "$output" -eq ผิด ]; then
-              echo "✅ รันได้ แต่คำตอบคือ: $output"
+            if [ "$output" -eq 1 ]; then
+              echo "✅ ถูก เก่งมาก"
             else
-              echo "❌ Error: unexpected code $output"
+              echo "❌ ผิด น่อง ตามนี้ $output"
             exit 1
             fi
