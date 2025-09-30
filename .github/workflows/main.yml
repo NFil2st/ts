@@ -18,11 +18,9 @@ jobs:
           run: |
             output=$(node dist/Test1.js)
 
-            if [ $output -ne 5 ]; then
-              echo "Error: code $output"
-              exit 1
-            fi
-            if [ $output -ne 32 ]; then
-                echo "ถูกแล้ว"
-                exit 1
+            if [ "$output" -eq 5 ] || [ "$output" -eq 32 ]; then
+              echo "✅ ถูกแล้ว: $output"
+            else
+              echo "❌ Error: unexpected code $output"
+            exit 1
             fi
