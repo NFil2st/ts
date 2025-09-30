@@ -6,5 +6,19 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: Print text from index.js
-        run: cat dist/index.js
+      - name: set up node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '18'
+
+      - name: install package json
+        run: npm install
+
+      - name: run test
+        run: |
+          output=$(node dist/Test.js)
+
+          if [ $output -ne ผิด ]; then
+            echo "มันบ่แม่นอ่ะ ไปแก้ใหม่เตอะ ตามนี้ $output"
+            exit 1
+          fi
