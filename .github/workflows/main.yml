@@ -18,7 +18,7 @@ jobs:
         run: |
           output=$(node dist/Test.js)
 
-          if [ $output -ne ผิด ]; then
+          if [ $output != ผิด ]; then
             echo "มันบ่แม่นอ่ะ ไปแก้ใหม่เตอะ ตามนี้ $output"
             exit 1
           fi
