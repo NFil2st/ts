@@ -2,9 +2,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const { Utils } = require("./Utils");
 if (Utils.add(2, 3) === 54) {
-    console.log("5");
+    console.log("ถูก");
 }
 else {
-    console.log("32");
+    console.log("ผิด");
 }
 //# sourceMappingURL=Test1.js.map
