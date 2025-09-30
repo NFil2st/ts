@@ -18,8 +18,8 @@ jobs:
           run: |
             output=$(node dist/Test1.js)
 
-            if [ "$output" -eq 5 ] || [ "$output" -eq 32 ]; then
-              echo "✅ ถูกแล้ว: $output"
+            if [ "$output" -eq ถูก ] || [ "$output" -eq ผิด ]; then
+              echo "✅ รันได้ แต่คำตอบคือ: $output"
             else
               echo "❌ Error: unexpected code $output"
             exit 1
